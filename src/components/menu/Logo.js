@@ -1,3 +1,11 @@
-/**
- * Created by Vital on 16.06.2017.
- */
+import React from 'react';
+
+function Logo() {
+  return (
+    <div className="navbar-header">
+      <span className="navbar-brand">ToDo List</span>
+    </div>
+  );
+}
+
+export default Logo;
