@@ -2,15 +2,12 @@ import React from 'react';
 
 class TaskRow extends React.Component {
   render() {
-    const checked = '';
-    const value = 'New Task';
-
     return (
-      <li key={}>
-        <div className='well well-sm ${selected}'>
+      <li>
+        <div className='well well-sm'>
           <div className='checkbox no-top-bottom-margin'>
             <label>
-              <input type='checkbox' {checked} />{value}
+              <input type='checkbox' />{this.props.value}
             </label>
           </div>
         </div>
