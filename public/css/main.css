@@ -112,21 +112,11 @@ body {
     background-color: #027EE5;
 }
 
-.navbar-action-btn {
+.navbar-default .navbar-nav>li>a {
     color: #fff;
 }
 
-.nav>li>a.navbar-action-btn:link, .nav>li>a.navbar-action-btn:visited {
-    color: #fff;
-    background-color: #027EE5;
-}
-
-.nav>li>a.navbar-action-btn:hover, .nav>li>a.navbar-action-btn:active {
-    color: #000;
-    background-color: #027EE5;
-}
-
-.navbar-brand {
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
     color: #fff;
 }
 
@@ -167,37 +157,25 @@ body {
 
 /* Popover */
 
-.popover {
-    border: none;
-    border-radius: 0;
-    background-color: #027EE5;
-}
-
 .popover-content {
     color: #fff;
     background-color: #027EE5;
-}
-
-.popover-content .list-unstyled {
+    list-style-type: none;
     margin-bottom: 0;
 }
 
-.popover-content .list-unstyled li {
+.popover-content li {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.popover-content a {
+.popover-content li a {
     color: #fff;
 }
 
-.popover-content a:hover, .popover-content a:active {
+.popover-content li a:hover, .popover-content li a:active {
     color: #000;
     text-decoration: none;
-}
-
-.popover > .arrow {
-    display: none;
 }
 
 /* Modal window for add new task */
