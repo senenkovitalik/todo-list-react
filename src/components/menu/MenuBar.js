@@ -5,7 +5,6 @@ import { Glyphicon } from 'react-bootstrap';
 import { Overlay } from 'react-bootstrap';
 import Popover from './Popover';
 
-
 class MenuBar extends React.Component {
   constructor() {
     super();

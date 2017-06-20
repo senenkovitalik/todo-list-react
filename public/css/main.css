@@ -145,7 +145,7 @@ body {
 
 /* Big round button with + */
 
-#btn-add-task {
+.add-task {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -153,7 +153,14 @@ body {
     border-radius: 50%;
     outline: none;
     padding: 14px 20px;
+    color: #fff;
 }
+
+.add-task:focus, .add-task:active:focus {
+    /* Don't show outline */
+    outline: none;
+}
+
 
 /* Popover */
 
@@ -180,32 +187,16 @@ body {
 
 /* Modal window for add new task */
 
-#modal-add-task .modal-content {
+.modal-content {
     background-color: #027EE5;
-    border-radius: 0;
 }
 
-#modal-add-task .modal-header {
+.modal-header {
     color: #fff;
 }
 
-#modal-add-task .modal-header .close {
-    color: #fff;
-    opacity: 0.8;
-    outline: none;
-}
-
-#modal-add-task .modal-header .close:hover {
-    color: #000;
-    text-shadow: 0 1px 0 #000;
-}
-
-#modal-add-task .modal-body {
+.modal-body {
     background-color: #DFDDF0;
-}
-
-#modal-add-task .modal-footer {
-    color: #fff;
 }
 
 /* LIst */
