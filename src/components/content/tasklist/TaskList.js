@@ -7,9 +7,13 @@ class TaskList extends React.Component {
       return <TaskRow key={task.id} value={task.value} />;
     });
     return (
-      <ul className="list-unstyled">
-        {listItems}
-      </ul>
+      <div className="row" style={{marginTop: 20 + 'px'}}>
+        <div className="col-xs-12 col-md-8 col-md-offset-2">
+          <ul className="list-unstyled">
+            {listItems}
+          </ul>
+        </div>
+      </div>
     );
   }
 }

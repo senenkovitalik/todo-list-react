@@ -165,6 +165,7 @@ body {
 /* Popover */
 
 .popover-content {
+    border: 1px solid #000;
     color: #fff;
     background-color: #027EE5;
     list-style-type: none;
