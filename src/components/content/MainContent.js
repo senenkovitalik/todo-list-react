@@ -10,18 +10,6 @@ class MainContent extends React.Component {
     this.hideModal = this.hideModal.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
-      tasks: [
-        {
-          "id": "5944f3b18e6d7ba0bdff2fef",
-          "value": "ad pariatur occaecat eiusmod",
-          "status": true
-        },
-        {
-          "id": "5944f3b10518a0481598f8a0",
-          "value": "ex ut occaecat do",
-          "status": false
-        }
-      ],
       show: false
     };
   }
@@ -39,16 +27,27 @@ class MainContent extends React.Component {
   }
 
   handleSubmit(text) {
-    alert('Try to add new Task: ' + text);
+    this.props.onSubmit(text);
     this.hideModal();
   }
 
   render() {
     return (
       <div className="container-fluid" style={{marginTop: 50 + 'px'}}>
-        <TaskList tasks={this.state.tasks} />
-        <Button bsStyle="primary" bsSize="large" className="add-task" onClick={this.showModal}>+</Button>
-        <ModalWindow show={this.state.show} onHide={this.hideModal} onSubmit={this.handleSubmit} />
+        <TaskList tasks={this.props.tasks} />
+
+        <Button
+          bsStyle="primary"
+          bsSize="large"
+          className="add-task"
+          onClick={this.showModal}
+        >+</Button>
+
+        <ModalWindow
+          show={this.state.show}
+          onHide={this.hideModal}
+          onSubmit={this.handleSubmit}
+        />
       </div>
     );
   }

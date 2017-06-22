@@ -3,6 +3,9 @@ import TaskRow from "./TaskRow";
 
 class TaskList extends React.Component {
   render() {
+    if (this.props.tasks.length === 0) {
+      return null;
+    }
     const listItems = this.props.tasks.map((task) => {
       return <TaskRow key={task.id} value={task.value} />;
     });

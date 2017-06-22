@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import TODOList from './components/TODOList';
 
 ReactDOM.render(
-  <TODOList/>,
+  <TODOList />,
   document.getElementById('root')
 );
