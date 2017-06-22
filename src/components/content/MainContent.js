@@ -34,7 +34,10 @@ class MainContent extends React.Component {
   render() {
     return (
       <div className="container-fluid" style={{marginTop: 50 + 'px'}}>
-        <TaskList tasks={this.props.tasks} />
+        <TaskList
+          tasks={this.props.tasks}
+          handleComplete={this.props.handleComplete}
+        />
 
         <Button
           bsStyle="primary"

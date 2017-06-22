@@ -6,9 +6,15 @@ class TaskList extends React.Component {
     if (this.props.tasks.length === 0) {
       return null;
     }
+
     const listItems = this.props.tasks.map((task) => {
-      return <TaskRow key={task.id} value={task.value} />;
+      return <TaskRow
+        key={task.id}
+        task={task}
+        handleComplete={this.props.handleComplete}
+      />;
     });
+
     return (
       <div className="row" style={{marginTop: 20 + 'px'}}>
         <div className="col-xs-12 col-md-8 col-md-offset-2">
