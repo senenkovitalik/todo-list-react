@@ -9,11 +9,21 @@ class Popover extends React.Component {
           position: 'absolute'
         }}>
         <ul className="popover-content">
-          <li key={1}><a href='#'>Show active</a></li>
-          <li key={2}><a href='#'>Show completed</a></li>
-          <li key={3}><a href='#'>Select all</a></li>
-          <li key={4}><a href='#'>Deselect all</a></li>
-          <li key={5}><a href='#'>Remove task(s)</a></li>
+          { this.props.filter !== 'ACTIVE_TASK' &&
+            <li key={1}><a href='#' onClick={(e) => { e.preventDefault(); this.props.setFilter('ACTIVE_TASK'); }}>Show active</a></li>
+          }
+          { this.props.filter !== 'COMPLETED_TASK' &&
+            <li key={2}><a href='#' onClick={(e) => {e.preventDefault(); this.props.setFilter('COMPLETED_TASK'); }}>Show completed</a></li>
+          }
+          { false &&
+            <li key={3}><a href='#'>Select all</a></li>
+          }
+          { false &&
+            <li key={4}><a href='#'>Deselect all</a></li>
+          }
+          { false &&
+            <li key={5}><a href='#'>Remove task(s)</a></li>
+          }
         </ul>
       </div>
     );

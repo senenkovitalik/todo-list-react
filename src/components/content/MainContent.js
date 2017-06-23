@@ -36,6 +36,7 @@ class MainContent extends React.Component {
       <div className="container-fluid" style={{marginTop: 50 + 'px'}}>
         <TaskList
           tasks={this.props.tasks}
+          filter={this.props.filter}
           handleComplete={this.props.handleComplete}
         />
 

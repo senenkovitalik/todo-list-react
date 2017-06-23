@@ -11,10 +11,15 @@ class TODOList extends React.Component {
     super(props);
     this.handleComplete = this.handleComplete.bind(this);
     this.addNewTask = this.addNewTask.bind(this);
+    this.setFilter = this.setFilter.bind(this);
     this.state = {
       tasks: TaskLocalStorage.getAll(),
-      filter: 'active'
+      filter: TaskLocalStorage.getFilter()
     };
+  }
+
+  componentWillMount() {
+    this.setFilter(this.state.filter);
   }
 
   handleComplete(event, taskObj) {
@@ -52,6 +57,13 @@ class TODOList extends React.Component {
     });
   }
 
+  setFilter(strFilter) {
+    window.location.hash = strFilter;
+    this.setState({
+      filter: strFilter
+    });
+  }
+
   getUniqueNumber() {
     let date = new Date();
     return date.getSeconds() * Math.pow(10, 5)
@@ -62,7 +74,7 @@ class TODOList extends React.Component {
   render() {
     return (
       <div>
-        <MenuBar />
+        <MenuBar filter={this.state.filter} setFilter={this.setFilter} />
         <MainContent
           tasks={this.state.tasks}
           filter={this.state.filter}

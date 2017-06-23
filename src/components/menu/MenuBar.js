@@ -46,7 +46,7 @@ class MenuBar extends React.Component {
             target={() => ReactDOM.findDOMNode(this.refs.target)}
             rootClose>
 
-            <Popover />
+            <Popover filter={this.props.filter} setFilter={this.props.setFilter} />
 
           </Overlay>
         </Nav>

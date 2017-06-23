@@ -11,6 +11,7 @@ class TaskList extends React.Component {
       return <TaskRow
         key={task.id}
         task={task}
+        filter={this.props.filter}
         handleComplete={this.props.handleComplete}
       />;
     });

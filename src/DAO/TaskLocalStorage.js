@@ -24,12 +24,12 @@ export default class TaskLocalStorage {
   }
 
   static getFilter() {
-    const FILTER = "active";
-    return localStorage.getItem(FILTER) || "active";
+    const FILTER = "filter";
+    return localStorage.getItem(FILTER) || "ACTIVE_TASK";
   }
 
   static saveFilter(filter) {
-    const FILTER = "active";
+    const FILTER = "filter";
     localStorage.setItem(FILTER, filter);
   }
 }
